@@ -1,5 +1,6 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Header from "./_component/Header";
+import Hero from "./_component/Hero";
 
 /* 
 * Default Home Page Component of the Application
@@ -7,9 +8,10 @@ import { Button } from "@/components/ui/button";
 */
 export default function Home() {
   return (
-    <div>
-     <h1>hello world</h1>
-     <Button>Subscribe</Button>
+    <div className="h-screen overflow-hidden flex flex-col">
+      <Header />
+      <Hero />
+     
     </div>
   );
 }

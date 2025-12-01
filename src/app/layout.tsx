@@ -1,10 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Jersey_10, Press_Start_2P } from "next/font/google";
+import { Providers } from "./providers";
+
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+const pressStart = Press_Start_2P({ 
+  subsets: ['latin'],
+  weight: '400', // This font only has one weight
+  variable: '--font-game'
+})
+const gameFont = Jersey_10({
+  variable: "--font-game",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 const geistMono = Geist_Mono({
@@ -23,11 +35,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} 
+        ${gameFont.variable} ${pressStart.variable} antialiased`}
       >
-        {children}
+        <Providers>
+          {children}
+        </Providers>
+   
       </body>
     </html>
   );
