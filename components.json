@@ -5,7 +5,11 @@
   "tsx": true,
   "tailwind": {
     "config": "",
+<<<<<<< HEAD
     "css": "src/app/globals.css",
+=======
+    "css": "app/globals.css",
+>>>>>>> 4dda41b (Add Header, ModeToggle, NavigationMenu, and assets)
     "baseColor": "neutral",
     "cssVariables": true,
     "prefix": ""
