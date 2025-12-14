@@ -1,0 +1,15 @@
+// export const constants = {
+//     API_URL: process.env.NEXT_PUBLIC_API_URL,
+// }
+// export const SITE_NAME = "NextJS Practice";
+export type Book = {
+    id: number;
+    title: string;
+    author: string;
+}
+const books: Book[] = [
+    { id: 1, title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
+    { id: 2, title: "1984", author: "George Orwell" },
+    { id: 3, title: "To Kill a Mockingbird", author: "Harper Lee" },
+];
+export default books;
